@@ -8,7 +8,19 @@ moodify 프론트엔드 (Next.js)
 **0815-18**
 Next.js 
 **invariant expected layout router to be mounted 트러블슈팅 기록..(아직 계속해보는중..)**
+
+
+**0820**
+- 에러 추가 확인
+There are multiple modules with names that only differ in casing. this can lead to unexpected behavior when compiling on a filesystem...
+
+***0824***
+해결완료
+**0825** 
+프로젝트 시작
 ```
+
+
 OS: Windows
 
 Node.js: v22.14.0 (NVM for Windows, 경로 C:\nvm4w\nodejs\node.exe)
@@ -118,3 +130,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 **다음 액션**
 - Vs code 에서만 실행이 안되는 이유를 찾아야함
+
+
+***문제  해결***
+```
+=> 사용자 이름이 Jinhyeon , jinhyeon 으로 되어있음, next의 경우, 대소문자의 차이로 인해 C:Jinhyeon 과 C:jinhyeon의 구분에 혼동이 옴
+Jinhyeon에서 npm run dev => error 발생
+jinhyeon에서 npm run dev  => error 발생하지 않음
+- next의 대소문자 구분 중복 처리로 인해서 일정 훅이 나오지 로딩되지 않거나 중간에 문제가 생긴것으로 확인됨
+- 해결 완료
+```
+
