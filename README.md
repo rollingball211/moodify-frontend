@@ -17,7 +17,8 @@ There are multiple modules with names that only differ in casing. this can lead 
 ***0824***
 해결완료
 **0825** 
-프로젝트 시작
+프로젝트 시작 ~ 
+
 ```
 
 
