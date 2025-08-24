@@ -125,6 +125,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 12. 패키지 중복/충돌 점검
 - npm ls react react-dom next → next@15.4.6 / react@19.1.0 / react-dom@19.1.0 단일 버전 (deduped)
 - 결과: 패키지 충돌 아님 → 무관
+
+13. vs code 재설치
+- 효과 없음
+
+14. 환경 변수 수정
+- next의 경우, 대소문자의 차이로 인해 C:Jinhyeon 과 C:jinhyeon의 구분에 혼동
+- 환경 변수를 바꾸고 Jinhyeon -> jinhyeon 에서 npm run으로 문제 해결함
 ```
 
 
