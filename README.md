@@ -17,10 +17,15 @@ There are multiple modules with names that only differ in casing. this can lead 
 ***0824***
 해결완료
 **0825** 
-프로젝트 시작 ~ 
+프로젝트 시작 
+
+- 프로젝트 기본 세팅
+- tailwind 기본 세팅
+- 각 page / error / 등 구조 세팅 완료
+
+
 
 ```
-
 
 OS: Windows
 
@@ -34,7 +39,7 @@ Next.js: 15.4.6 (새 프로젝트)
 
 구조: src/app/layout.tsx, src/app/page.tsx (App Router)
 ```
-
+**트러블슈팅 관련 문서**
 **증상**
 ```
 npm run dev 실행 후 브라우저 런타임 에러 발생
@@ -149,4 +154,32 @@ jinhyeon에서 npm run dev  => error 발생하지 않음
 - 해결 완료
 ```
 
->>>>>>> e7b2797dd54c0b1c5f8149740d1c29b01f0ffc72
+
+**0825**
+
+```
+프로젝트 초기 세팅
+
+1. env.local (환경변수 파일)
+- Next에서 NEXT_PUBLIC 이 붙은 변수는 클라이언트 & 서버 양쪽에서 접근 가능
+- 백엔드 주소를 변수로 저장함
+- const base = process.env.NEXT_PUBLIC_API_BASE_URL;
+
+
+2. next.config.mjs
+- 전역설정 파일
+- App router 경로를 ts 타입 기능으로 보장함
+- 존재하지 않는 파일을 넣으면 ts 에러 발생 (라우트 오타 방지 기능)
+
+3. 
+```
+
+
+
+
+
+
+
+
+
+
