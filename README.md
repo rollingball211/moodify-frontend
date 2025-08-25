@@ -171,7 +171,17 @@ jinhyeon에서 npm run dev  => error 발생하지 않음
 - App router 경로를 ts 타입 기능으로 보장함
 - 존재하지 않는 파일을 넣으면 ts 에러 발생 (라우트 오타 방지 기능)
 
-3. 
+3. 프로젝트 구조 세팅
+-> lib의 api.ts 및 types.ts 파일 생성
+-> public / assests , styles (tailwind 기본 학습)
+-> components 등 파일들을 세팅함
+
+4. moods / music 파일 우선 세팅
+-> moods의 page, loading , error 세팅 완료
+-> page api 테스팅 중 403 에러 처리 진행 중
+
+
+-스프링 스큐리티 문제해결 진행 중
 ```
 
 
