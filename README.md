@@ -181,10 +181,26 @@ jinhyeon에서 npm run dev  => error 발생하지 않음
 -> page api 테스팅 중 403 에러 처리 진행 중
 
 
--스프링 스큐리티 문제해결 진행 중
+-스프링 시큐리티 문제해결 진행 중
+-완료 0826
 ```
 
+**0826 할일**
+```
+app/music/[id]/page.tsx 구현
 
+const list = await api.musicByMood(Number(params.id));
+
+간단 카드 UI + (있으면) youtubeUrl iframe
+
+/moods 클릭 시 로그 남기기 (옵션 A 추천: 서버 액션)
+
+app/moods/actions.ts에 selectMood(moodId) 서버 액션
+
+form action={async () => selectMood(m.id)} 로 버튼 감싸기
+
+DB에 mood_logs 테이블 존재/엔드포인트 확인
+```
 
 
 
