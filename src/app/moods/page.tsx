@@ -1,9 +1,13 @@
 import { api } from "@/lib/api";
+import { Route } from "next";
 import Link from "next/link";
 
 export default async function MoodsPage() {
 
     const moods = await api.moods(); //moods 모두 불러오기
+
+    //router 사용하기! <Link path>
+    const musicHref = (id:number) => `/music/${id}` as Route;
 
     return (
         <div className="space-y-4">
@@ -12,10 +16,10 @@ export default async function MoodsPage() {
                 {moods.map((m)=> (
                       <Link
                       key={m.id}
-                      href={{ pathname: "/music/[id]", query: { id: String(m.id) } }} //정확한 라우트 타입 추론을 위해서 
+                      href={musicHref(m.id)}
                       className="p-4 bg-blue-500/10 rounded-xl text-center hover:bg-blue-500/20"
                       >
-                    {m.name}
+                    {m.name}|
                     </Link>
                 ))}
             </div>
