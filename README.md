@@ -23,6 +23,7 @@ There are multiple modules with names that only differ in casing. this can lead 
 - tailwind 기본 세팅
 - 각 page / error / 등 구조 세팅 완료
 
+***0826***
 
 
 ```
