@@ -1,16 +1,20 @@
 import { api } from "@/lib/api";
 import Link from "next/link";
 
-type Props = { params : {id:string}} 
+type Props = { params: Promise<{ id: string }> };
 
 export default async function MusicByMoodPage({params} : Props) {
-    const moodId = Number(params.id);
+    const { id } = await params;
+    const moodId = Number(id);
 
     if (Number.isNaN(moodId)) {
         throw new Error("잘못된 moodId입니다.");
     }
 
     const list = await api.musicByMood(moodId);
+    
+    //debug
+      <pre>{JSON.stringify(list, null, 2)}</pre>
 
     return (
         <div className="space-y-6">

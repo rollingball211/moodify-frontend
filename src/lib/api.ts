@@ -1,3 +1,5 @@
+import { Music, MusicByMoodDTO } from "./types";
+
 const callAPI = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8080";
 
 /* 
@@ -50,8 +52,15 @@ api.moods() 이런식으로..
 
 export const api = {
     moods: () => http<import("./types").Mood[]>("/api/moods"),
-    musicByMood : (moodId : number) =>
-        http<import("./types").Music[]>(`/api/mood-music/${moodId}`),
+    musicByMood : async (moodId: number) :Promise<Music[]> => {
+        const raw= await http<MusicByMoodDTO[]>(`/api/mood-music/${moodId}`);
+        return raw.map( (data) => ({
+            id : data.musicId,
+            title : data.musicTitle,
+            artist : data.musicArtist,
+            youtubeUrl : data.musicUrl,
+        }) );
+    },
     musicDetail : (id:number) => 
         http<import("./types").Music>(`/api/music/${id}`),
 };
