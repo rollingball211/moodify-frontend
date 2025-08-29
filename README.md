@@ -24,8 +24,13 @@ There are multiple modules with names that only differ in casing. this can lead 
 - 각 page / error / 등 구조 세팅 완료
 
 ***0826***
+app/music/[id]/page.tsx 구현
+youtubeUrl iframe 연결 완료
 
-
+**0827**
+자소서작업하느라 커밋을 못함..
+**0828-9**
+몸이 안좋아서 30일부터 프로젝트 재개할 예정
 ```
 
 OS: Windows
